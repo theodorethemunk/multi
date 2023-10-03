@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Multisender</title>
+    <script type="text/javascript" src="assets/unpkg.com/web3@1.5.2/dist/web3.min.js"></script>
+    <script type="text/javascript" src="assets/unpkg.com/web3modal@1.9.4/dist/index.js"></script>
+    <script type="text/javascript" src="assets/unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="assets/unpkg.com/@walletconnect/web3-provider@1.6.2/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="assets/unpkg.com/fortmatic@2.2.1/dist/fortmatic.js"></script>
+    <script src="assets/main.js" defer></script>
+    <link rel="stylesheet" href="assets/main.css" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="/coinvc.png">
+</head>
+
+<body>
+    <div id="networkWarning" style="color: red;"></div>
+    <div class="center"><br><img src="/coinvc.png" style="max-width: 150px;"></div>
+    <h1 style="text-align: center;">Vortex Cash Multi Sender</h1>
+    </div>
+
+    <div class="head-container">
+        <div class="network-container">
+            <span id="networkDisplay"></span>
+            <button id="connectButton" class="connect">Connect Wallet</button>
+        </div>
+    </div>
+    <form id="airdropForm" style="padding: 13px;">
+        <br><br><br><label for="tokenAddress">Token Address:</label>
+        <br>
+        <br>
+        <input type="text" id="tokenAddress" required><br>
+
+        <label for="decimals">Decimals:</label>
+        <br>
+        <br>
+        <input type="number" id="decimals" required><br>
+
+        <label for="addresses">Addresses:</label>
+        <br><br>
+        <p style="font-size: 0.8rem;">Note: If you want to send to multiple address add "," per address example "0x..32,"0x..66,"0x..12"</p>
+        <br><br>
+        <input type="text" id="addresses" required>
+
+        <p style="font-size: 0.8rem;">Note: If you want to send specific amount to multiple address add "," per amount example "2000,1800,2600"</p>
+        <br>
+        <label for="amounts">Amounts:</label>
+        <br><br>
+        <input type="text" id="amounts" required>
+
+        <button id="multiSendSpecificAmountButton" type="button">Multi-Send Specific Amount</button>
+        <button id="multiSendSameAmountButton" type="button">Multi-Send Same Amount</button>
+        <br><br><br><br>
+    </form>
+    </div>
+</body>
+
+</html>
